@@ -4,7 +4,7 @@
 
 Loomy Code runs [OpenCode](https://github.com/sst/opencode) (the open-source AI coding agent) inside a real **Ubuntu Linux container on your Android phone** — powered by proot, no root, no PC needed. Write code, run it, browse the web, and chat — all on-device.
 
-> Made by **[@siddsaga](https://t.me/siddsaga)** · Telegram channel: **[t.me/siddmethodsgiveway](https://t.me/siddmethodsgiveway)**
+> Made by **\@siddsaga** · Telegram channel: **[t.me/siddmethodsgiveway](https://t.me/siddmethodsgiveway)**
 
 ---
 
@@ -68,6 +68,6 @@ apksigner sign --ks your-keystore.jks --out loomy.apk loomy-aligned.apk
 
 - **[OpenCode](https://github.com/sst/opencode)** — the coding agent runtime (MIT)
 - **[proot](https://github.com/proot-me/proot)** + talloc — the Linux container layer (GPL)
-- App build & branding — **@siddsaga**
+- App build & branding — **\@siddsaga** ([t.me/siddmethodsgiveway](https://t.me/siddmethodsgiveway))
 
 *Unofficial OpenCode mobile client. Not affiliated with the OpenCode project.*
