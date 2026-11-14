@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="108.0dip" android:width="108.0dip" android:viewportWidth="108.0" android:viewportHeight="108.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:pivotX="54.0" android:pivotY="54.0" android:scaleX="0.78" android:scaleY="0.78">
+        <path android:fillColor="@drawable/$ic_fg_look_desktop__0" android:pathData="M35,27L73,27Q75,27 75,29L75,79Q75,81 73,81L35,81Q33,81 33,79L33,29Q33,27 35,27Z" />
+        <path android:fillColor="@drawable/$ic_fg_look_desktop__1" android:pathData="M43.5,38L64.5,38L64.5,70L43.5,70Z" />
+        <path android:fillColor="@drawable/$ic_fg_look_desktop__2" android:pathData="M43.5,51L64.5,51L64.5,70L43.5,70Z" />
+        <path android:fillColor="#ff000000" android:pathData="M43.5,38L64.5,38L64.5,39.2L43.5,39.2Z" android:fillAlpha="0.35" />
+    </group>
+</vector>

@@ -1,0 +1,877 @@
+.class public abstract Ll34;
+.super Ljava/lang/Object;
+.source "r8-map-id-3768cf91095969ec35651af15b9e328e1a40f6431c25e16a6280295a8e7eaa26"
+
+
+# static fields
+.field public static final a:Lup0;
+
+.field public static final b:Lup0;
+
+.field public static final c:Lup0;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    .line 1
+    new-instance v0, Lup0;
+
+    .line 2
+    .line 3
+    sget-object v1, Ldf0;->g:Ldf0;
+
+    .line 4
+    .line 5
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    .line 6
+    .line 7
+    invoke-direct {v0, v1, v2}, Lup0;-><init>(Ldf0;F)V
+
+    .line 8
+    .line 9
+    .line 10
+    sput-object v0, Ll34;->a:Lup0;
+
+    .line 11
+    .line 12
+    new-instance v0, Lup0;
+
+    .line 13
+    .line 14
+    sget-object v1, Ldf0;->f:Ldf0;
+
+    .line 15
+    .line 16
+    invoke-direct {v0, v1, v2}, Lup0;-><init>(Ldf0;F)V
+
+    .line 17
+    .line 18
+    .line 19
+    sput-object v0, Ll34;->b:Lup0;
+
+    .line 20
+    .line 21
+    new-instance v0, Lup0;
+
+    .line 22
+    .line 23
+    sget-object v1, Ldf0;->h:Ldf0;
+
+    .line 24
+    .line 25
+    invoke-direct {v0, v1, v2}, Lup0;-><init>(Ldf0;F)V
+
+    .line 26
+    .line 27
+    .line 28
+    sput-object v0, Ll34;->c:Lup0;
+
+    .line 29
+    .line 30
+    return-void
+.end method
+
+.method public static a(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    if-eqz p0, :cond_0
+
+    .line 2
+    .line 3
+    return-void
+
+    .line 4
+    :cond_0
+    invoke-static {p1}, Lbz1;->f(Ljava/lang/String;)V
+
+    .line 5
+    .line 6
+    .line 7
+    return-void
+.end method
+
+.method public static final b(JLuj0;)J
+    .locals 6
+
+    .line 1
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    const/4 v1, 0x2
+
+    .line 6
+    const-wide/16 v2, 0x0
+
+    .line 7
+    .line 8
+    const-wide/16 v4, 0x1
+
+    .line 9
+    .line 10
+    if-eq v0, v1, :cond_4
+
+    .line 11
+    .line 12
+    const/4 v1, 0x3
+
+    .line 13
+    if-eq v0, v1, :cond_3
+
+    .line 14
+    .line 15
+    const/4 v1, 0x4
+
+    .line 16
+    if-eq v0, v1, :cond_2
+
+    .line 17
+    .line 18
+    const/4 v1, 0x5
+
+    .line 19
+    if-eq v0, v1, :cond_1
+
+    .line 20
+    .line 21
+    const/4 v1, 0x6
+
+    .line 22
+    if-ne v0, v1, :cond_0
+
+    .line 23
+    .line 24
+    const-wide/32 v0, 0x5265c00
+
+    .line 25
+    .line 26
+    .line 27
+    goto :goto_0
+
+    .line 28
+    :cond_0
+    const-string p0, "Wrong unit for millisMultiplier: "
+
+    .line 29
+    .line 30
+    invoke-static {p2, p0}, Lgn0;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 31
+    .line 32
+    .line 33
+    return-wide v2
+
+    .line 34
+    :cond_1
+    const-wide/32 v0, 0x36ee80
+
+    .line 35
+    .line 36
+    .line 37
+    goto :goto_0
+
+    .line 38
+    :cond_2
+    const-wide/32 v0, 0xea60
+
+    .line 39
+    .line 40
+    .line 41
+    goto :goto_0
+
+    .line 42
+    :cond_3
+    const-wide/16 v0, 0x3e8
+
+    .line 43
+    .line 44
+    goto :goto_0
+
+    .line 45
+    :cond_4
+    move-wide v0, v4
+
+    .line 46
+    :goto_0
+    cmp-long p2, p0, v2
+
+    .line 47
+    .line 48
+    if-nez p2, :cond_5
+
+    .line 49
+    .line 50
+    return-wide v2
+
+    .line 51
+    :cond_5
+    cmp-long p2, p0, v4
+
+    .line 52
+    .line 53
+    const-wide v2, 0x3fffffffffffffffL    # 1.9999999999999998
+
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    if-nez p2, :cond_7
+
+    .line 59
+    .line 60
+    cmp-long p0, v0, v2
+
+    .line 61
+    .line 62
+    if-lez p0, :cond_6
+
+    .line 63
+    .line 64
+    goto :goto_1
+
+    .line 65
+    :cond_6
+    return-wide v0
+
+    .line 66
+    :cond_7
+    cmp-long p2, v0, v4
+
+    .line 67
+    .line 68
+    if-nez p2, :cond_9
+
+    .line 69
+    .line 70
+    cmp-long p2, p0, v2
+
+    .line 71
+    .line 72
+    if-lez p2, :cond_8
+
+    .line 73
+    .line 74
+    goto :goto_1
+
+    .line 75
+    :cond_8
+    return-wide p0
+
+    .line 76
+    :cond_9
+    invoke-static {p0, p1}, Ljava/lang/Long;->numberOfLeadingZeros(J)I
+
+    .line 77
+    .line 78
+    .line 79
+    move-result p2
+
+    .line 80
+    rsub-int p2, p2, 0x80
+
+    .line 81
+    .line 82
+    invoke-static {v0, v1}, Ljava/lang/Long;->numberOfLeadingZeros(J)I
+
+    .line 83
+    .line 84
+    .line 85
+    move-result v4
+
+    .line 86
+    sub-int/2addr p2, v4
+
+    .line 87
+    const/16 v4, 0x3f
+
+    .line 88
+    .line 89
+    if-ge p2, v4, :cond_a
+
+    .line 90
+    .line 91
+    mul-long/2addr p0, v0
+
+    .line 92
+    return-wide p0
+
+    .line 93
+    :cond_a
+    if-le p2, v4, :cond_b
+
+    .line 94
+    .line 95
+    goto :goto_1
+
+    .line 96
+    :cond_b
+    mul-long/2addr p0, v0
+
+    .line 97
+    cmp-long p2, p0, v2
+
+    .line 98
+    .line 99
+    if-lez p2, :cond_c
+
+    .line 100
+    .line 101
+    :goto_1
+    return-wide v2
+
+    .line 102
+    :cond_c
+    return-wide p0
+.end method
+
+.method public static final c(Ltt1;F)Ltt1;
+    .locals 2
+
+    .line 1
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 2
+    .line 3
+    cmpg-float v0, p1, v0
+
+    .line 4
+    .line 5
+    if-nez v0, :cond_0
+
+    .line 6
+    .line 7
+    sget-object p1, Ll34;->a:Lup0;
+
+    .line 8
+    .line 9
+    goto :goto_0
+
+    .line 10
+    :cond_0
+    new-instance v0, Lup0;
+
+    .line 11
+    .line 12
+    sget-object v1, Ldf0;->g:Ldf0;
+
+    .line 13
+    .line 14
+    invoke-direct {v0, v1, p1}, Lup0;-><init>(Ldf0;F)V
+
+    .line 15
+    .line 16
+    .line 17
+    move-object p1, v0
+
+    .line 18
+    :goto_0
+    invoke-interface {p0, p1}, Ltt1;->d(Ltt1;)Ltt1;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object p0
+
+    .line 22
+    return-object p0
+.end method
+
+.method public static synthetic d(Ltt1;)Ltt1;
+    .locals 1
+
+    .line 1
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 2
+    .line 3
+    invoke-static {p0, v0}, Ll34;->c(Ltt1;F)Ltt1;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p0
+
+    .line 7
+    return-object p0
+.end method
+
+.method public static final e(Ltt1;F)Ltt1;
+    .locals 6
+
+    .line 1
+    new-instance v0, Lcz2;
+
+    .line 2
+    .line 3
+    const/4 v3, 0x0
+
+    .line 4
+    const/4 v5, 0x5
+
+    .line 5
+    const/4 v1, 0x0
+
+    .line 6
+    move v4, p1
+
+    .line 7
+    move v2, p1
+
+    .line 8
+    invoke-direct/range {v0 .. v5}, Lcz2;-><init>(FFFFI)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-interface {p0, v0}, Ltt1;->d(Ltt1;)Ltt1;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p0
+
+    .line 15
+    return-object p0
+.end method
+
+.method public static final f(Ltt1;FF)Ltt1;
+    .locals 6
+
+    .line 1
+    new-instance v0, Lcz2;
+
+    .line 2
+    .line 3
+    const/4 v3, 0x0
+
+    .line 4
+    const/4 v5, 0x5
+
+    .line 5
+    const/4 v1, 0x0
+
+    .line 6
+    move v2, p1
+
+    .line 7
+    move v4, p2
+
+    .line 8
+    invoke-direct/range {v0 .. v5}, Lcz2;-><init>(FFFFI)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-interface {p0, v0}, Ltt1;->d(Ltt1;)Ltt1;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p0
+
+    .line 15
+    return-object p0
+.end method
+
+.method public static g(Ltt1;FFI)Ltt1;
+    .locals 2
+
+    .line 1
+    and-int/lit8 v0, p3, 0x1
+
+    .line 2
+    .line 3
+    const/high16 v1, 0x7fc00000    # Float.NaN
+
+    .line 4
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 6
+    .line 7
+    move p1, v1
+
+    .line 8
+    :cond_0
+    and-int/lit8 p3, p3, 0x2
+
+    .line 9
+    .line 10
+    if-eqz p3, :cond_1
+
+    .line 11
+    .line 12
+    move p2, v1
+
+    .line 13
+    :cond_1
+    invoke-static {p0, p1, p2}, Ll34;->f(Ltt1;FF)Ltt1;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p0
+
+    .line 17
+    return-object p0
+.end method
+
+.method public static final h(F)Ltt1;
+    .locals 6
+
+    .line 1
+    new-instance v0, Lcz2;
+
+    .line 2
+    .line 3
+    const/4 v5, 0x0
+
+    .line 4
+    move v2, p0
+
+    .line 5
+    move v3, p0
+
+    .line 6
+    move v4, p0
+
+    .line 7
+    move v1, p0
+
+    .line 8
+    invoke-direct/range {v0 .. v5}, Lcz2;-><init>(FFFFZ)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-object v0
+.end method
+
+.method public static i(Ltt1;FFFFI)Ltt1;
+    .locals 8
+
+    .line 1
+    and-int/lit8 v0, p5, 0x2
+
+    .line 2
+    .line 3
+    const/high16 v1, 0x7fc00000    # Float.NaN
+
+    .line 4
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 6
+    .line 7
+    move v4, v1
+
+    .line 8
+    goto :goto_0
+
+    .line 9
+    :cond_0
+    move v4, p2
+
+    .line 10
+    :goto_0
+    and-int/lit8 p2, p5, 0x4
+
+    .line 11
+    .line 12
+    if-eqz p2, :cond_1
+
+    .line 13
+    .line 14
+    move v5, v1
+
+    .line 15
+    goto :goto_1
+
+    .line 16
+    :cond_1
+    move v5, p3
+
+    .line 17
+    :goto_1
+    and-int/lit8 p2, p5, 0x8
+
+    .line 18
+    .line 19
+    if-eqz p2, :cond_2
+
+    .line 20
+    .line 21
+    move v6, v1
+
+    .line 22
+    goto :goto_2
+
+    .line 23
+    :cond_2
+    move v6, p4
+
+    .line 24
+    :goto_2
+    new-instance v2, Lcz2;
+
+    .line 25
+    .line 26
+    const/4 v7, 0x0
+
+    .line 27
+    move v3, p1
+
+    .line 28
+    invoke-direct/range {v2 .. v7}, Lcz2;-><init>(FFFFZ)V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-interface {p0, v2}, Ltt1;->d(Ltt1;)Ltt1;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object p0
+
+    .line 35
+    return-object p0
+.end method
+
+.method public static final j(Ltt1;F)Ltt1;
+    .locals 6
+
+    .line 1
+    new-instance v0, Lcz2;
+
+    .line 2
+    .line 3
+    const/4 v5, 0x1
+
+    .line 4
+    move v2, p1
+
+    .line 5
+    move v3, p1
+
+    .line 6
+    move v4, p1
+
+    .line 7
+    move v1, p1
+
+    .line 8
+    invoke-direct/range {v0 .. v5}, Lcz2;-><init>(FFFFZ)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-interface {p0, v0}, Ltt1;->d(Ltt1;)Ltt1;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p0
+
+    .line 15
+    return-object p0
+.end method
+
+.method public static final k(Ltt1;FF)Ltt1;
+    .locals 6
+
+    .line 1
+    new-instance v0, Lcz2;
+
+    .line 2
+    .line 3
+    const/4 v5, 0x1
+
+    .line 4
+    move v3, p1
+
+    .line 5
+    move v4, p2
+
+    .line 6
+    move v1, p1
+
+    .line 7
+    move v2, p2
+
+    .line 8
+    invoke-direct/range {v0 .. v5}, Lcz2;-><init>(FFFFZ)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-interface {p0, v0}, Ltt1;->d(Ltt1;)Ltt1;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p0
+
+    .line 15
+    return-object p0
+.end method
+
+.method public static final l(Ltt1;FFFF)Ltt1;
+    .locals 6
+
+    .line 1
+    new-instance v0, Lcz2;
+
+    .line 2
+    .line 3
+    const/4 v5, 0x1
+
+    .line 4
+    move v1, p1
+
+    .line 5
+    move v2, p2
+
+    .line 6
+    move v3, p3
+
+    .line 7
+    move v4, p4
+
+    .line 8
+    invoke-direct/range {v0 .. v5}, Lcz2;-><init>(FFFFZ)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-interface {p0, v0}, Ltt1;->d(Ltt1;)Ltt1;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p0
+
+    .line 15
+    return-object p0
+.end method
+
+.method public static m(Ltt1;FFFI)Ltt1;
+    .locals 1
+
+    .line 1
+    and-int/lit8 p4, p4, 0x2
+
+    .line 2
+    .line 3
+    const/high16 v0, 0x7fc00000    # Float.NaN
+
+    .line 4
+    .line 5
+    if-eqz p4, :cond_0
+
+    .line 6
+    .line 7
+    move p2, v0
+
+    .line 8
+    :cond_0
+    invoke-static {p0, p1, p2, p3, v0}, Ll34;->l(Ltt1;FFFF)Ltt1;
+
+    .line 9
+    .line 10
+    .line 11
+    move-result-object p0
+
+    .line 12
+    return-object p0
+.end method
+
+.method public static final n(Ltt1;F)Ltt1;
+    .locals 6
+
+    .line 1
+    new-instance v0, Lcz2;
+
+    .line 2
+    .line 3
+    const/4 v4, 0x0
+
+    .line 4
+    const/16 v5, 0xa
+
+    .line 5
+    .line 6
+    const/4 v2, 0x0
+
+    .line 7
+    move v3, p1
+
+    .line 8
+    move v1, p1
+
+    .line 9
+    invoke-direct/range {v0 .. v5}, Lcz2;-><init>(FFFFI)V
+
+    .line 10
+    .line 11
+    .line 12
+    invoke-interface {p0, v0}, Ltt1;->d(Ltt1;)Ltt1;
+
+    .line 13
+    .line 14
+    .line 15
+    move-result-object p0
+
+    .line 16
+    return-object p0
+.end method
+
+.method public static o(Ltt1;F)Ltt1;
+    .locals 6
+
+    .line 1
+    new-instance v0, Lcz2;
+
+    .line 2
+    .line 3
+    const/4 v4, 0x0
+
+    .line 4
+    const/16 v5, 0xa
+
+    .line 5
+    .line 6
+    const/high16 v1, 0x7fc00000    # Float.NaN
+
+    .line 7
+    .line 8
+    const/4 v2, 0x0
+
+    .line 9
+    move v3, p1
+
+    .line 10
+    invoke-direct/range {v0 .. v5}, Lcz2;-><init>(FFFFI)V
+
+    .line 11
+    .line 12
+    .line 13
+    invoke-interface {p0, v0}, Ltt1;->d(Ltt1;)Ltt1;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p0
+
+    .line 17
+    return-object p0
+.end method

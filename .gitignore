@@ -1,0 +1,8 @@
+# build artifacts
+build/
+dist/
+# signing keys - NEVER publish
+*.jks
+*.keystore
+# logs
+*.log
