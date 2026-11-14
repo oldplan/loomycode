@@ -2,8 +2,6 @@
 
 An AI coding agent that runs fully on your Android phone. It runs OpenCode inside a real Ubuntu container (proot) on the device - no root, no PC needed. Write code, run it, browse the web and chat, all on the phone.
 
-Made by \@siddsaga - Telegram: [t.me/siddmethodsgiveway](https://t.me/siddmethodsgiveway)
-
 ## What it can do
 
 - Full AI coding agent on-device: OpenCode 1.19.5 runs in an Ubuntu container on the phone
