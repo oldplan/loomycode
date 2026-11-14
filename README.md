@@ -43,12 +43,12 @@ MIUI kills background servers by default. After installing:
 
 ## Build from source
 
-This repo contains the apktool project of the app (smali and resources).
+This repo IS the apktool project of the app (smali and resources at the repo root).
 
 Requirements: JDK 17+, apktool 2.10 or newer, Android build-tools.
 
 ```
-java -jar apktool.jar b source -o loomy-unsigned.apk
+java -jar apktool.jar b . -o loomy-unsigned.apk
 zipalign -f -p 4 loomy-unsigned.apk loomy-aligned.apk
 apksigner sign --ks your-keystore.jks --out loomy.apk loomy-aligned.apk
 ```
