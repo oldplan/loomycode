@@ -1,73 +1,66 @@
-# Loomy Code ☁️
+# Loomy Code
 
-**A little AI coding agent that lives on your phone.**
+An AI coding agent that runs fully on your Android phone. It runs OpenCode inside a real Ubuntu container (proot) on the device - no root, no PC needed. Write code, run it, browse the web and chat, all on the phone.
 
-Loomy Code runs [OpenCode](https://github.com/sst/opencode) (the open-source AI coding agent) inside a real **Ubuntu Linux container on your Android phone** — powered by proot, no root, no PC needed. Write code, run it, browse the web, and chat — all on-device.
+Made by \@siddsaga - Telegram: [t.me/siddmethodsgiveway](https://t.me/siddmethodsgiveway)
 
-> Made by **\@siddsaga** · Telegram channel: **[t.me/siddmethodsgiveway](https://t.me/siddmethodsgiveway)**
+## What it can do
 
----
+- Full AI coding agent on-device: OpenCode 1.19.5 runs in an Ubuntu container on the phone
+- Phone tools: the agent can set reminders and alarms, use the clipboard, take photos, get your location, save files to Downloads, send notifications and generate or edit images
+- Free models built in: start chatting right away, no account needed
+- Bring your own key: connect any provider (a free Gemini API key works)
+- Remote devices: control Loomy Code running on your computer from the phone
+- 21 icon themes, dark and light mode, memory on/off
+- Self-updater: the app keeps itself updated
 
-## ✨ Features
+## Install
 
-- 🧠 **Full AI coding agent on-device** — runs OpenCode 1.19.5 in a Ubuntu (proot) container, entirely on the phone
-- 📱 **Phone tools** — the agent can set reminders & alarms, read/fill the clipboard, take photos, get your location, save files to Downloads, send notifications, and generate/edit images
-- 💬 **Free models built-in** — chat with free models (GLM, DeepSeek, Nemotron, MiMo and more) right away, no account needed
-- 🔑 **Bring your own key** — connect any provider (a free Gemini API key works) for direct, reliable access
-- 🖥️ **Remote devices** — steer Loomy Code running on your computer from your phone
-- 🎨 **21 icon themes**, dark/light, memory on/off, holiday outfits
-- 🔄 **Self-updater** — the app keeps itself up to date
+1. Download `loomy-ai-1.0.0-free.apk` from the [Releases page](https://github.com/oldplan/loomycode/releases/latest)
+2. Allow "Install unknown apps" for your browser or file manager if asked
+3. Install and open. First run downloads the Linux setup, about 110 MB, one time only
+4. Walk through onboarding: name, theme, permissions (all optional), then Continue. The chat opens when setup finishes
 
-## 📲 Install (users)
-
-1. Grab **`loomy-ai-1.0.0-free.apk`** from this repo (or the Telegram channel)
-2. Allow **"Install unknown apps"** for your browser/file manager if asked
-3. Install and open — first run downloads the Linux setup (**~110 MB, one time**)
-4. Walk through onboarding (name → theme → permissions — all optional) → **Continue** → chat opens
-
-### Xiaomi / POCO / MIUI users (important!)
+### Xiaomi, POCO and MIUI users
 
 MIUI kills background servers by default. After installing:
 
-1. **Settings → Apps → Manage apps → Loomy Code → Autostart → ON**
-2. Same page → **Battery saver → "No restrictions"**
-3. Recents screen → long-press the Loomy Code card → **lock it** 🔒
+1. Settings - Apps - Manage apps - Loomy Code - Autostart - ON
+2. Same page - Battery saver - "No restrictions"
+3. Recents screen - long-press the Loomy Code card - lock it
 
-## 🧭 Using the app
+## Using the app
 
-| What | How |
-|---|---|
-| **Chat** | Type in "Reply to Loomy Code…" — the agent thinks, runs commands and edits files |
-| **Models** | Tap the model name → **More models** → pick anything with a **Free** badge |
-| **Own allowance** | Settings → Account → sign in with GitHub/Google |
-| **Your own API key** | Settings → **Connect provider** → paste a key (free Gemini key from aistudio.google.com works) |
-| **Advanced config** | Settings → **opencode.json** editor — models, agents, MCP, permissions, skills |
-| **Server status** | The notification shows the running server; if it ever stops, tap the banner to restart |
+**Chat:** type in the "Reply to Loomy Code" box. The agent thinks, runs commands and edits files.
 
-**Tip:** models without a **Free** badge are paid — they only work with a provider connected.
+**Models:** tap the model name at the top, then "More models". Pick models with the Free badge. Models without it are paid and need a provider connected.
 
-## 🛠 Build from source (devs)
+**Your own free allowance:** Settings, then sign in with GitHub or Google. Free models share a limit per connection - signing in gives you your own.
 
-This repo contains the **apktool project** (smali + resources) of the app.
+**Your own API key:** Settings, then "Connect provider". Paste any API key. A free Gemini key from aistudio.google.com works.
 
-**Requirements:** JDK 17+, [apktool 2.10+](https://github.com/iBotPeaches/Apktool/releases), Android build-tools (zipalign, apksigner)
+**Advanced config:** Settings has an opencode.json editor for models, agents, MCP, permissions and skills.
 
-```bash
-# 1. Decode is already done — this repo IS the decoded project (source/)
-# 2. Rebuild
+**Server status:** the notification shows the running server. If it ever stops, tap the banner to restart.
+
+## Build from source
+
+This repo contains the apktool project of the app (smali and resources).
+
+Requirements: JDK 17+, apktool 2.10 or newer, Android build-tools.
+
+```
 java -jar apktool.jar b source -o loomy-unsigned.apk
-
-# 3. Align + sign (use YOUR OWN keystore — do not distribute ours)
 zipalign -f -p 4 loomy-unsigned.apk loomy-aligned.apk
 apksigner sign --ks your-keystore.jks --out loomy.apk loomy-aligned.apk
 ```
 
-> ⚠️ The signing keystore is **not** included (kept private). If you rebuild with your own key, users must uninstall the original first.
+The signing keystore is not included. If you rebuild with your own key, users must uninstall the original app first.
 
-## 🙏 Credits
+## Credits
 
-- **[OpenCode](https://github.com/sst/opencode)** — the coding agent runtime (MIT)
-- **[proot](https://github.com/proot-me/proot)** + talloc — the Linux container layer (GPL)
-- App build & branding — **\@siddsaga** ([t.me/siddmethodsgiveway](https://t.me/siddmethodsgiveway))
+- OpenCode - the coding agent runtime (MIT): github.com/sst/opencode
+- proot and talloc - the Linux container layer (GPL)
+- App build and branding: \@siddsaga
 
-*Unofficial OpenCode mobile client. Not affiliated with the OpenCode project.*
+Unofficial OpenCode mobile client. Not affiliated with the OpenCode project.
