@@ -14,7 +14,7 @@ An AI coding agent that runs fully on your Android phone. It runs OpenCode insid
 
 ## Install
 
-1. Download `loomy-code-1.0.0-free.apk` from the [Releases page](https://github.com/oldplan/loomycode/releases/latest)
+1. Download [LoomyCode.apk](https://github.com/oldplan/loomycode/releases/latest/download/LoomyCode.apk) (or from the [Releases page](https://github.com/oldplan/loomycode/releases/latest))
 2. Allow "Install unknown apps" for your browser or file manager if asked
 3. Install and open. First run downloads the Linux setup, about 110 MB, one time only
 4. Walk through onboarding: name, theme, permissions (all optional), then Continue. The chat opens when setup finishes
